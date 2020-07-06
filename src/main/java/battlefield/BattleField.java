@@ -100,10 +100,7 @@ public class BattleField {
                 }
             }
         }
-        if (array[1] > 0 || array[2] > 0 || array[3] > 0 || array[4] > 0 ){
-            return false;
-        }
-        return true;
+        return array[1] <= 0 && array[2] <= 0 && array[3] <= 0 && array[4] <= 0;
     }
 
 }
