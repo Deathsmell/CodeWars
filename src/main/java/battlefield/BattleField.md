@@ -17,8 +17,10 @@ Each ship must be a straight line, except for submarines, which are just single 
 
 This is all you need to solve this kata. If you're interested in more information about the game, visit this link.
 
-Source
--
+Source and links
+---
+[__Solution__](BattleField.java)
+
 My codewars [acount](https://www.codewars.com/users/Deathsmell)
 
 Task page in codewars site [link](https://www.codewars.com/kata/52bb6539a4cf1b12d90005b7) 
