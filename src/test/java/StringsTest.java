@@ -35,4 +35,17 @@ class StringsTest {
                 "%L2asL`)&W\\L\\Ped/:Y@YN&5<m7,Vut10IK<!eBBAX", "%L2asL`)&W\\L\\Ped/:Y@Y*no]KCZDsBqmB,mI52D]E <\\v(cqh*sx"));
 
     }
+
+    @Test
+    void stripComments() {
+        assertEquals(
+                "apples, pears\ngrapes\nbananas",
+                Strings.stripComments( "apples, pears # and bananas\ngrapes\nbananas !apples", new String[] { "#", "!" } )
+        );
+
+        assertEquals(
+                "a\nc\nd",
+                Strings.stripComments( "a #b\nc\nd $e f g", new String[] { "#", "$" } )
+        );
+    }
 }

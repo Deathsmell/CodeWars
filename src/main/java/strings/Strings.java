@@ -1,6 +1,18 @@
 package strings;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class Strings {
+
+    public static String stripComments(String text, String[] commentSymbols) {
+        String[] split = text.split("\n");
+        String pattern = "[\\s]*([" + String.join("", commentSymbols) + "].*)?$";
+        return Arrays.stream(split)
+                .map(s -> s.replaceAll(pattern, ""))
+                .collect(Collectors.joining("\n"));
+    }
+
     public static String rangeExtraction(int[] array) {
 
         StringBuilder sb = new StringBuilder();
